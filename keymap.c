@@ -42,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_RAISE] = LAYOUT(
  
-  KC_POWER,TSKMGR,        LGUI(KC_UP),   _______,        LALT(KC_F4), LCTL(F5),  _______,          _______, _______,   _______, _______, _______, _______, RESET,  \
+  KC_PWR ,TSKMGR,        LGUI(KC_UP),   _______,        LALT(KC_F4), LCTL(F5),  _______,          _______, _______,   _______, _______, _______, _______, RESET,  \
   CALTDEL, LGUI(KC_LEFT), HYPR(KC_M),    LGUI(KC_RIGHT), RSA(KC_F),    _______,  _______,          _______, _______,   _______, _______, _______, _______, _______, \
   KC_CAPS, _______,       LGUI(KC_DOWN), LGUI(KC_L),     _______,      _______,  _______,          _______, _______,   _______, KC_MSTP, KC_MPLY, KC_VOLU, KC_MUTE, \
   COMPONE, _______,       COMPTWO,       _______,                      _______,  _______,          _______, _______,           _______, KC_MPRV,  KC_VOLD,  KC_MNXT  \
