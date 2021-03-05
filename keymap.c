@@ -28,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------+--------|        |--------+--------+--------+--------+--------+--------+--------|
      KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_SPC,           KC_BSLS,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_UP,    KC_SLSH,
   //|--------+--------+--------+--------+--------+--------+--------|        |--------+--------+--------+--------+--------+--------+--------|
-     KC_LCTL, RAISE ,  KC_LWIN, KC_LALT,           LOWER,   KC_SPC,           KC_BSPC, KC_ENT,            LOWER,  KC_LEFT,   KC_DOWN, KC_RGHT
+     KC_LCTL, KC_LWIN, RAISE,   KC_LALT,           LOWER,   KC_SPC,           KC_BSPC, KC_ENT,            LOWER,  KC_LEFT,   KC_DOWN, KC_RGHT
   //`--------+--------+--------+--------+--------+--------+--------/        \--------+--------+--------+--------+--------+--------+--------'
   ),
 
@@ -42,10 +42,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_RAISE] = LAYOUT(
  
-  KC_PWR ,TSKMGR,        LGUI(KC_UP),   _______,        LALT(KC_F4), LCTL(F5),  _______,          _______, _______,   _______, _______, _______, _______, RESET,  \
+  KC_PWR ,TSKMGR,         LGUI(KC_UP),   _______,        LALT(KC_F4), LCTL(F5),  _______,          _______, _______,   _______, _______, _______, _______, RESET,  \
   CALTDEL, LGUI(KC_LEFT), HYPR(KC_M),    LGUI(KC_RIGHT), RSA(KC_F),    _______,  _______,          _______, _______,   _______, _______, _______, _______, _______, \
   KC_CAPS, _______,       LGUI(KC_DOWN), LGUI(KC_L),     _______,      _______,  _______,          _______, _______,   _______, KC_MSTP, KC_MPLY, KC_VOLU, KC_MUTE, \
-  COMPONE, _______,       COMPTWO,       _______,                      _______,  _______,          _______, _______,           _______, KC_MPRV,  KC_VOLD,  KC_MNXT  \
+  COMPONE, COMPTWO,      _______,        _______,                      _______,  _______,          _______, _______,           _______, KC_MPRV,  KC_VOLD,  KC_MNXT  \
   
   )
 
