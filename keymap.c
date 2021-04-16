@@ -41,10 +41,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_RAISE] = LAYOUT(
-  TSKMGR,  _______,       LGUI(KC_UP),   _______,        LALT(KC_F4), LCTL(F5), _______,          _______, _______,   _______, _______, _______, _______, RESET,  \
-  CALTDEL, LGUI(KC_LEFT), HYPR(KC_M),    LGUI(KC_RIGHT), RSA(KC_F),  MEH(KC_G), _______,          _______, _______,   _______, _______, _______, _______, KC_PWR, \
-  KC_CAPS, _______,       LGUI(KC_DOWN), LGUI(KC_L),     _______,      _______, _______,          _______, _______,   _______, KC_MSTP, KC_MPLY, KC_VOLU, KC_MUTE, \
-  COMPONE, COMPTWO,       _______,       _______,                      _______, _______,          _______, _______,           _______, KC_MPRV,  KC_VOLD,  KC_MNXT  \
+  TSKMGR,  _______,       LGUI(KC_UP),   _______,        LALT(KC_F4), LCTL(KC_F5), _______,          _______, _______,   _______, _______, _______, _______, RESET,  \
+  CALTDEL, LGUI(KC_LEFT), HYPR(KC_M),    LGUI(KC_RIGHT), RSA(KC_F),     MEH(KC_G), _______,          _______, _______,   _______, _______, _______, _______, KC_PWR, \
+  KC_CAPS, _______,       LGUI(KC_DOWN), LGUI(KC_L),     _______,         _______, _______,          _______, _______,   _______, KC_MSTP, KC_MPLY, KC_VOLU, KC_MUTE, \
+  COMPONE, COMPTWO,       _______,       _______,                         _______, _______,          _______, _______,           _______, KC_MPRV,  KC_VOLD,  KC_MNXT  \
   
   )
 
