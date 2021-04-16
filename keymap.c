@@ -17,7 +17,7 @@ enum custom_keycodes {
 
 enum combos {
   QE_SCTAB,
-  WR_CTAB
+  WR_CTAB,
   ET_CST
 };
 
@@ -26,8 +26,8 @@ const uint16_t PROGMEM wr_combo[] = {KC_W, KC_R, COMBO_END};
 const uint16_t PROGMEM et_combo[] = {KC_E, KC_T, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-  [WE_SCTAB] = COMBO(qe_combo, RCS(KC_TAB)),
-  [ER_CTAB] = COMBO(wr_combo, RCTL(KC_TAB))
+  [QE_SCTAB] = COMBO(qe_combo, RCS(KC_TAB)),
+  [WR_CTAB] = COMBO(wr_combo, RCTL(KC_TAB)),
   [ET_CST] = COMBO(et_combo, RCS(KC_T))
 };
 
@@ -44,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------+--------|        |--------+--------+--------+--------+--------+--------+--------|
      KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_SPC,           KC_BSLS,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_UP,    KC_SLSH,
   //|--------+--------+--------+--------+--------+--------+--------|        |--------+--------+--------+--------+--------+--------+--------|
-     KC_LCTL, KC_LWIN, RAISE,   KC_LALT,           LOWER,   KC_SPC,           KC_BSPC, KC_ENT,            LOWER,  KC_LEFT,   KC_DOWN, KC_RGHT
+     KC_LCTL, KC_LWIN, OSL(_RAISE), KC_LALT,    OSL(_LOWER), KC_SPC,           KC_BSPC, KC_ENT,            LOWER,  KC_LEFT,   KC_DOWN, KC_RGHT
   //`--------+--------+--------+--------+--------+--------+--------/        \--------+--------+--------+--------+--------+--------+--------'
   ),
 
