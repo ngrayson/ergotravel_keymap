@@ -16,19 +16,19 @@ enum custom_keycodes {
 };
 
 enum combos {
-  WE_SCTAB,
-  ER_CTAB
-  // RT_CST
+  QE_SCTAB,
+  WR_CTAB
+  ET_CST
 };
 
-const uint16_t PROGMEM we_combo[] = {KC_W, KC_E, COMBO_END};
-const uint16_t PROGMEM er_combo[] = {KC_E, KC_R, COMBO_END};
-// const uint16_t PROGMEM rt_combo[] = {KC_R, KC_T, COMBO_END};
+const uint16_t PROGMEM qe_combo[] = {KC_Q, KC_E, COMBO_END};
+const uint16_t PROGMEM wr_combo[] = {KC_W, KC_R, COMBO_END};
+const uint16_t PROGMEM et_combo[] = {KC_E, KC_T, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-  [WE_SCTAB] = COMBO(we_combo, RCS(KC_TAB)),
-  [ER_CTAB] = COMBO(er_combo, RCTL(KC_TAB))
-  // [ER_CTAB] = COMBO(rt_combo, RCS(KC_T))
+  [WE_SCTAB] = COMBO(qe_combo, RCS(KC_TAB)),
+  [ER_CTAB] = COMBO(wr_combo, RCTL(KC_TAB))
+  [ET_CST] = COMBO(et_combo, RCS(KC_T))
 };
 
 #define CALTDEL LCTL(LALT(KC_DEL))

@@ -28,7 +28,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define MASTER_RIGHT
 // #define EE_HANDS
 
-#define COMBO_COUNT 2
+#define COMBO_COUNT 3
 #define COMBO_TERM 15
 
 #undef RGBLED_NUM
