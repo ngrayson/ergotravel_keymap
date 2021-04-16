@@ -15,6 +15,19 @@ enum custom_keycodes {
   // ADJUST,
 };
 
+enum combo_events {
+  WE_CSTAB,
+  ER_CTAB
+}
+
+const uint16_t PROGMEM we_combo[] = {KC_W, KC_E, COMBO_END};
+const uint16_t PROGMEM er_combo[] = {KC_E, KC_R, COMBO_END};
+
+combo_t key_combos[COMBO_COUNT] = {
+  [WE_CSTAB] = COMBO(we_combo, LCTL(KC_TAB)),
+  [ER_CTAB] = COMBO(er_combo, RCS(KC_TAB))
+};
+
 #define CALTDEL LCTL(LALT(KC_DEL))
 #define TSKMGR LCTL(LSFT(KC_ESC))
 
@@ -41,10 +54,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_RAISE] = LAYOUT(
-  TSKMGR,  _______,       LGUI(KC_UP),   _______,        LALT(KC_F4), LCTL(F5), _______,          _______, _______,   _______, _______, _______, _______, RESET,  \
-  CALTDEL, LGUI(KC_LEFT), HYPR(KC_M),    LGUI(KC_RIGHT), RSA(KC_F),  MEH(KC_G), _______,          _______, _______,   _______, _______, _______, _______, KC_PWR, \
-  KC_CAPS, _______,       LGUI(KC_DOWN), LGUI(KC_L),     _______,      _______, _______,          _______, _______,   _______, KC_MSTP, KC_MPLY, KC_VOLU, KC_MUTE, \
-  COMPONE, COMPTWO,       _______,       _______,                      _______, _______,          _______, _______,           _______, KC_MPRV,  KC_VOLD,  KC_MNXT  \
+  TSKMGR,  _______,       LGUI(KC_UP),   _______,        LALT(KC_F4), LCTL(KC_F5), _______,          _______, _______,   _______, _______, _______, _______, RESET,  \
+  CALTDEL, LGUI(KC_LEFT), HYPR(KC_M),    LGUI(KC_RIGHT), RSA(KC_F),     MEH(KC_G), _______,          _______, _______,   _______, _______, _______, _______, KC_PWR, \
+  KC_CAPS, _______,       LGUI(KC_DOWN), LGUI(KC_L),     _______,         _______, _______,          _______, _______,   _______, KC_MSTP, KC_MPLY, KC_VOLU, KC_MUTE, \
+  COMPONE, COMPTWO,       _______,       _______,                         _______, _______,          _______, _______,           _______, KC_MPRV,  KC_VOLD,  KC_MNXT  \
   
   )
 
