@@ -11,7 +11,7 @@ enum custom_keycodes {
   LOWER,
   RAISE,
   COMPONE,
-  COMPTWO,
+  COMPTWO
   // ADJUST,
 };
 
@@ -33,6 +33,21 @@ combo_t key_combos[COMBO_COUNT] = {
 
 #define CALTDEL LCTL(LALT(KC_DEL))
 #define TSKMGR LCTL(LSFT(KC_ESC))
+#define OSHIFT OSM(MOD_LSFT)
+#define OCTL OSM(MOD_LCTL)
+#define OWIN OSM(MOD_LGUI)
+#define OALT OSM(MOD_LALT)
+#define VDLEFT LGUI(LCTL(KC_LEFT))
+#define VDRIGHT LGUI(LCTL(KC_RIGHT))
+#define SNAPUP LGUI(KC_UP) 
+#define SNAPLEFT LGUI(KC_LEFT)
+#define SNAPDOWN LGUI(KC_DOWN)
+#define SNAPRIGHT LGUI(KC_RIGHT)
+#define ALTF4 LALT(KC_F4)
+#define REFRESH LCTL(KC_F5)
+#define LOCK LGUI(KC_L)
+#define MAXIMIZE HYPR(KC_M)
+#define AUDIOSRC MEH(KC_G)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -49,18 +64,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_LOWER] = LAYOUT(
-  KC_GRV ,       KC_F1,          KC_F2,   KC_F3,         KC_F4,   KC_F5,   KC_INS,              _______, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  \
-  _______,       KC_1,           KC_2,    KC_3,          KC_4,    KC_5,    _______,             _______, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_F12, \
-  OSM(MOD_LSFT), KC_EXLM,        KC_AT,   KC_HASH,       KC_DLR,  KC_PERC, _______,             _______, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_PGUP, KC_RPRN, \
-  OSM(MOD_LCTL), OSM(MOD_LGUI),  _______, OSM(MOD_LALT), _______, _______, _______,             _______,          _______, KC_HOME, KC_PGDN, KC_END  \
+  KC_GRV , KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_F5  , KC_INS ,             _______, KC_F6  , KC_F7  , KC_F8  , KC_F9  , KC_F10 , KC_F11 ,  \
+  _______, KC_1   , KC_2   , KC_3   , KC_4   , KC_5   , _______,             _______, KC_6   , KC_7   , KC_8   , KC_9   , KC_0   , KC_F12 , \
+  OSHIFT , KC_EXLM, KC_AT  , KC_HASH, KC_DLR , KC_PERC, _______,             _______, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_PGUP, KC_RPRN, \
+  OCTL   , OWIN   , _______, OALT   ,          _______, _______,             _______, _______,          _______, KC_HOME, KC_PGDN, KC_END  \
 
   ),
 
   [_RAISE] = LAYOUT(
-  TSKMGR,  LGUI(LCTL(KC_LEFT)), LGUI(KC_UP),   LGUI(LCTL(KC_RIGHT)), LALT(KC_F4), LCTL(KC_F5), _______,          _______, _______,   _______, _______, _______, _______, RESET,  \
-  CALTDEL, LGUI(KC_LEFT),       HYPR(KC_M),    LGUI(KC_RIGHT),       RSA(KC_F),   MEH(KC_G),   _______,          _______, _______,   _______, _______, _______, _______, KC_PWR, \
-  KC_CAPS, _______,             LGUI(KC_DOWN), LGUI(KC_L),           _______,     _______,     _______,          _______, _______,   _______, KC_MSTP, KC_MPLY, KC_VOLU, KC_MUTE, \
-  COMPONE, COMPTWO,             _______,       _______,                           _______,     _______,          _______, _______,           _______, KC_MPRV,  KC_VOLD,  KC_MNXT  \
+  TSKMGR , VDLEFT  , SNAPUP  , VDRIGHT  , ALTF4    , REFRESH , _______,          _______, _______,   _______, _______, _______, _______, RESET ,  \
+  CALTDEL, SNAPLEFT, MAXIMIZE, SNAPRIGHT, RSA(KC_F), AUDIOSRC, _______,          _______, _______,   _______, _______, _______, _______, KC_PWR, \
+  KC_CAPS, _______ , SNAPDOWN, LOCK     , _______  , _______ , _______,          _______, _______,   _______, KC_MSTP, KC_MPLY, KC_VOLU, KC_MUTE, \
+  COMPONE, COMPTWO , _______ , _______  ,            _______ , _______,          _______, _______,            _______, KC_MPRV, KC_VOLD,  KC_MNXT  \
   
   )
 
